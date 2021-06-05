@@ -31,8 +31,10 @@ The Sample format is provided below,
 - host :  Hostname of Email Server
 - port: SMTP port number
 - username: Username of email 
-- password: Gmmail app password or your email normal password
+- password: Gmail app password or your email normal password
 - to: Recpient Email address
+
+Run the ansible-playbook from your master server by below command,
 
 ```sh
 $ ansible-playbook email.yml
