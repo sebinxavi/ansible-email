@@ -39,3 +39,28 @@ Run the ansible-playbook from your master server by below command,
 ```sh
 $ ansible-playbook email.yml
 ```
+
+## _About the Ansible Playbook_
+~~~
+---
+- name: Sending email using Ansible
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: mail 
+      mail:
+        host: smtp.gmail.com
+        port: 587
+        username: "username@gmail.com"
+        password: "email password"
+        to: John Sam <johnsam12@gmail.com>
+        subject: Ansible-report
+        body: 'System {{ ansible_hostname }} has been successfully provisioned.'
+      delegate_to: localhost
+~~~
+
+## Author
+Created by [@sebinxavi](https://www.linkedin.com/in/sebinxavi/) - feel free to contact me and advise as necessary!
+
+<a href="mailto:sebin.xavi1@gmail.com"><img src="https://img.shields.io/badge/-sebin.xavi1@gmail.com-D14836?style=flat&logo=Gmail&logoColor=white"/></a>
+<a href="https://www.linkedin.com/in/sebinxavi"><img src="https://img.shields.io/badge/-Linkedin-blue"/></a>
